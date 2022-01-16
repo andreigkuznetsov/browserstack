@@ -29,7 +29,7 @@ public class AndroidTests extends TestBase {
         $(byClassName("android.widget.ImageButton")).click();
         $(MobileBy.AccessibilityId("Search Wikipedia")).click();
         $(MobileBy.id("org.wikipedia.alpha:id/search_lang_button")).shouldHave(Condition.text("RU"));
-        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Kremlin");
+        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Кремль");
         $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
     }
 }
