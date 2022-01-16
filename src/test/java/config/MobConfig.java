@@ -3,7 +3,7 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({"classpath:mobile.properties"})
-public interface MobileConfig extends Config {
+public interface MobConfig extends Config {
 
     String username();
 

@@ -1,6 +1,6 @@
 package helpers;
 
-import config.MobileConfig;
+import config.MobConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -9,11 +9,11 @@ public class Browserstack {
 
     public static String videoUrl(String sessionId) {
 
-        MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class);
+        MobConfig mobConfig = ConfigFactory.create(MobConfig.class);
 
-        String username = mobileConfig.username();
-        String password = mobileConfig.password();
-        String videoUrl = mobileConfig.videoUrl();
+        String username = mobConfig.username();
+        String password = mobConfig.password();
+        String videoUrl = mobConfig.videoUrl();
 
         return given()
                 .auth().basic(username, password)
