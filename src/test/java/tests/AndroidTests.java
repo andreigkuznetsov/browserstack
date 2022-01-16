@@ -36,34 +36,34 @@ public class AndroidTests extends TestBase {
     void searchTestRu() {
 
         step("Открываем меню Settings", () -> {
-        $(MobileBy.id("org.wikipedia.alpha:id/menu_overflow_button")).click();
-        $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_settings")).click();
+            $(MobileBy.id("org.wikipedia.alpha:id/menu_overflow_button")).click();
+            $(MobileBy.id("org.wikipedia.alpha:id/explore_overflow_settings")).click();
         });
 
         step("Изменяем язык поиска на русский", () -> {
-        $(MobileBy.id("android:id/title")).click();
-        $(MobileBy.id("org.wikipedia.alpha:id/preference_languages_filter")).sendKeys("Russian");
-        $(MobileBy.id("org.wikipedia.alpha:id/language_subtitle")).click();
+            $(MobileBy.id("android:id/title")).click();
+            $(MobileBy.id("org.wikipedia.alpha:id/preference_languages_filter")).sendKeys("Russian");
+            $(MobileBy.id("org.wikipedia.alpha:id/language_subtitle")).click();
         });
 
         step("Возвращаемся на экран со строкой поиска", () -> {
-        $(byClassName("android.widget.ImageButton")).click();
+            $(byClassName("android.widget.ImageButton")).click();
         });
 
         step("Открываем строку поиска", () -> {
-        $(MobileBy.AccessibilityId("Search Wikipedia")).click();
+            $(MobileBy.AccessibilityId("Search Wikipedia")).click();
         });
 
         step("Убеждаемся, что язык переключен на русский", () -> {
-        $(MobileBy.id("org.wikipedia.alpha:id/search_lang_button")).shouldHave(Condition.text("RU"));
+            $(MobileBy.id("org.wikipedia.alpha:id/search_lang_button")).shouldHave(Condition.text("RU"));
         });
 
         step("Вводим поисковое слово", () -> {
-        $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Кремль");
+            $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Кремль");
         });
 
         step("Проверяем, что в результатах поиска есть значения", () -> {
-        $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
+            $$(byClassName("android.widget.TextView")).shouldHave(sizeGreaterThan(0));
         });
     }
 }
