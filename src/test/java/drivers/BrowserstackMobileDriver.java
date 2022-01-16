@@ -14,7 +14,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
     public static MobConfig mobConfig = ConfigFactory.create(MobConfig.class);
 
-    String userName = mobConfig.username();
+    String username = mobConfig.username();
     String password = mobConfig.password();
     String appUrl = mobConfig.appUrl();
     static String remoteUrl = mobConfig.remoteUrl();
@@ -30,7 +30,7 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
     @Override
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
         // Set your access credentials
-        desiredCapabilities.setCapability("browserstack.user", userName);
+        desiredCapabilities.setCapability("browserstack.user", username);
         desiredCapabilities.setCapability("browserstack.key", password);
 
         // Set URL of the application under test
