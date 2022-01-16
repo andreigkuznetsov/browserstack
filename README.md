@@ -1,4 +1,4 @@
-# Примеры UI автотестов для мобильного приложения Wikipedia (trial сайта https://browserstack.com)
+# Примеры UI автотестов для Android приложения Wikipedia (trial сайта https://browserstack.com)
 
 ## Cписок автоматизированных тест-кейсов в данном проекте:
 
